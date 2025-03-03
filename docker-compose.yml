@@ -1,0 +1,19 @@
+version: '4.33.1'
+
+services:
+    database:
+        container_name: nextjs_15_lms
+        image: postgres:17.2
+        env_file:
+            - .env
+        environment:
+            - POSTGRES_DB=${DB_NAME}
+            - POSTGRES_USER=${DB_NAME}
+            - POSTGRES_PASSWORD=${DB_PASSWORD}
+        ports:
+            - ${DB_PORT}:${DB_PORT}
+        hostname: ${DB_HOST}
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+volumes:
+    pgdata:
