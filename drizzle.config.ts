@@ -14,6 +14,6 @@ export default defineConfig({
         database: env.DB_NAME,
         host: env.DB_HOST,
         ssl: false, // as local DataBase
-        /* url: `postgresql://${env.DB_USER}:${env.DB_PASSWORD}@${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`, */
+        url: `postgresql://${env.DB_USER}:${env.DB_PASSWORD}@${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`,
     },
 });
